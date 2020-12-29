@@ -1,6 +1,6 @@
 #! python3
 
-# Web Scraper which will scrape latest schemes from the government website when run 
+# Web Scraper which will scrape latest schemes from a farmer relate news website when run
  
 import requests, bs4, json
 
@@ -26,6 +26,9 @@ for child in soup.find_all("h3"):
 		link = "https://farmer.gov.in"
 		if(details.find('a', href=True)):
 			link = details.find('a', href=True)['href']
+			# in case the link is relative
+			if(not link.startswith("http")):
+				link = "https://krishijagran.com" + link;
 
 		# putting everything in json foromat
 		data['scheme'].append({
