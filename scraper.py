@@ -18,12 +18,17 @@ soup = bs4.BeautifulSoup(res.text,'lxml')
 # Fetch all the headings of the Schemes
 for child in soup.find_all("h3"):
 	if(child.contents[0].name == "strong"):
-		# print(child.string)
-		data['scheme'].append({
-		    'title': child.string,
-		    'details': 'will put detais here',
-		    'link': 'will put link here if found any'
-		})
+		 print(child.string)
+		 #soup.find('div', class_='detail_date').find('dt', text='Date').find_next_sibling('dd').text
+		 print(child.find_next_sibling('p').text.strip())
+		 #print(child.find_next_sibling('p').find_)
+		 print("\n")
+		# # putting everything in json foromat
+		# data['scheme'].append({
+		#     'title': child.string,
+		#     'details': 'will put detais here',
+		#     'link': 'will put link here if found any'
+		# })
 
 # fetching detais for the file
 # for details in soup.find_all("p"):
@@ -33,5 +38,5 @@ for child in soup.find_all("h3"):
 # 		print("not found");
 
 # putting stuff in json file
-with open('results.json', 'w') as outfile:
-    json.dump(data, outfile)
+# with open('results.json', 'w') as outfile:
+#     json.dump(data, outfile)
