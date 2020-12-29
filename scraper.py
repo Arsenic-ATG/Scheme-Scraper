@@ -20,8 +20,10 @@ for child in soup.find_all("h3"):
 	if(child.contents[0].name == "strong"):
 		 print(child.string)
 		 #soup.find('div', class_='detail_date').find('dt', text='Date').find_next_sibling('dd').text
-		 print(child.find_next_sibling('p').text.strip())
-		 #print(child.find_next_sibling('p').find_)
+		 details = child.find_next_sibling('p');
+		 print(details.text.strip()) 
+		 if(details.find('a', href=True)):
+		 	print(details.find('a', href=True)['href'])
 		 print("\n")
 		# # putting everything in json foromat
 		# data['scheme'].append({
