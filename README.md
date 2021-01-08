@@ -2,7 +2,7 @@
 
 Web scraper which scrapes a news website for information about important schemes for farmers and returns a the data in the `.json` file to be used in anywhere else.
 
-> ## Used in [Balrama App](https://github.com/hareshnayak/Hacknagpur2020) featured in hacknagpur 2020
+> ## Used in [💪Balrama App🧑‍🌾](https://github.com/hareshnayak/Hacknagpur2020) featured in hacknagpur 2020
 
 ## language used 
 - python 🐍
@@ -17,7 +17,7 @@ Web scraper which scrapes a news website for information about important schemes
 
 - if you want to use the scraper then just run the python script (make sure you have got external packages installed in your system beforhand)
 
-- check out the [Balrama App](https://github.com/hareshnayak/Hacknagpur2020) to use the it in-app
+- check out the [💪Balrama App🧑‍🌾](https://github.com/hareshnayak/Hacknagpur2020) to use the it in-app along with other cool features of the app
 
 ### 🙋don't know how to install the package ? 
 check [this](https://packaging.python.org/tutorials/installing-packages/) for detailed instructions 
